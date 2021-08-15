@@ -21,7 +21,6 @@ def write_state(state_txt):
     # t.write(state_data.state.item())
     t.write(state_txt)
 
-
 while len(guessed_states) < 50:
     answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Correct",
                                     prompt="Key in the state's name").title()
@@ -38,13 +37,5 @@ while len(guessed_states) < 50:
     if answer_state in all_states:
         guessed_states.append(answer_state)
         write_state(answer_state)
-        # t = turtle.Turtle()
-        # t.hideturtle()
-        # t.penup()
-        # state_data = data[data.state == answer_state]
-        # t.goto(x=int(state_data.x), y=int(state_data.y))
-        # # t.write(state_data.state.item())
-        # t.write(answer_state)
-
 
 turtle.mainloop()
